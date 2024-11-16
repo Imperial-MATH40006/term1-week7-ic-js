@@ -1,7 +1,6 @@
 import numpy as np
 import numpy.testing as npt
 from plotchecker import LinePlotChecker
-from plotchecker import ScatterPlotChecker
 print("Autograder loaded successfully!")
 print("Remember to always restart and run all from the Kernel menu before submitting!")
 def question1_b(x):
@@ -93,7 +92,7 @@ def question2a(x):
 def question2a_plot(_globals):
     t = [[1.0, 0.3535533905932738, 2.041077998578922e-17, -0.17677669529663687, -0.2, -0.11785113019775795, -2.6242431410300424e-17, 0.08838834764831842, 0.1111111111111111, 0.07071067811865477, 2.783288179880348e-17, -0.05892556509887889, -0.07692307692307693, -0.050507627227610506, -2.857509198010491e-17, 0.04419417382415916, 0.058823529411764705]]
     x = np.arange(17).reshape(1, 17)
-    pc = ScatterPlotChecker(_globals["ax"])
+    pc = LinePlotChecker(_globals["ax"])
     try:
         pc.assert_x_data_allclose(x)
     except:
